@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema de Incidentes</title>
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <h1>🚨 SISTEMA DE INCIDENTES</h1>
+
+  <!-- CONTROLES -->
+  <div class="controls">
+    <button onclick="criarIncidente()">+ Novo Incidente</button>
+
+    <input 
+      type="text" 
+      placeholder="Buscar incidente..."
+      onkeyup="filtrarIncidentes(this.value)"
+    >
+  </div>
+
+  <!-- LISTA DE INCIDENTES -->
+  <div id="lista-incidentes">
+
+    <!-- exemplo inicial -->
+    <div class="incidente">
+      <p><strong>INC001</strong> - Falha no processamento batch</p>
+      <p>Status: <span class="status-aberto">ABERTO</span></p>
+      <button onclick="alterarStatus(this)">Alterar Status</button>
+    </div>
+
+  </div>
+
+  <!-- DETALHES -->
+  <div id="detalhes">
+    <p>Selecione um incidente para ver os detalhes...</p>
+  </div>
+
+  <!-- JS externo -->
+  <script src="script.js"></script>
+
+</body>
+</html>
